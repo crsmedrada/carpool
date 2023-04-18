@@ -40,7 +40,7 @@
             $mail->isHTML(true);
  
             $mail->Subject = 'Email verification';
-            $mail->Body    = '<p>Click this link to verify your email.<a href = "http://caressa.tech/">Click Here</a></p>';
+            $mail->Body    = '<p>Click this link to verify your email.<a href = "http://caressa.tech/home.php">Click Here</a></p>';
  
             $mail->send();
             $encrypted_password = password_hash($password, PASSWORD_DEFAULT);
