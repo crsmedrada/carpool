@@ -29,18 +29,18 @@
             $mail->SMTPDebug = 0;
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
-            $mail->SMTPAuth = true;
+            $mail->SMTPAuth = 'true';
             $mail->Username = 'edradacaressa@gmail.com';
             $mail->Password = 'czffqedtgslopefp';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $mail->Port = 587;
+            $mail->Port = '587';
 
             $mail->setFrom('edradacaressa@gmail.com', 'Carpooling Registration');
             $mail->addAddress($email, $firstname);
             $mail->isHTML(true);
  
             $mail->Subject = 'Email verification';
-            $mail->Body    = '<p>Click this link to verify your email.<a href = "http://localhost/carpool/home.php">Click Here</a></p>';
+            $mail->Body    = '<p>Click this link to verify your email.<a href = "http://caressa.tech/">Click Here</a></p>';
  
             $mail->send();
             $encrypted_password = password_hash($password, PASSWORD_DEFAULT);
